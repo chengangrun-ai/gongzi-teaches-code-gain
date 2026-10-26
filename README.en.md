@@ -6,6 +6,8 @@ An agent skill that prints a one-shot **benchmark scoreboard**: how much less co
 
 It only displays. Nothing is edited, no mode is changed, nothing is persisted. Look at it and close it.
 
+![效果看板：基准测试中位数](screenshots/hero.png)
+
 ## Why it exists
 
 "Writing less code saves money" is a sentence that says nothing — nobody knows how much.
