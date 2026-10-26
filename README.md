@@ -1,63 +1,67 @@
+中文 | [English](README.en.md)
+
 # 公子教代码做事 · 效果看板
 
-【效果看板】一次性展示官方基准测试中位数：代码量更少、成本更低、速度更快。 注意是基准数据，不是当前仓库的真实统计。只展示，不改任何东西。 触发词：/ponytail-gain、ponytail 有什么用、能省多少。
+一个 agent 技能，一次性打印一块**基准测试记分板**：少写多少代码、省多少钱、快多少倍。
 
-## 📺 看看效果
+只展示，不改任何东西。看完就关掉，不驻留、不写文件、不改模式。
 
-![ponytail-gain](screenshots/hero.png)
+## 为什么有它
 
-> 把 `screenshots/hero.png` 换成真实效果图（建议 1200px 宽、不超过 400KB）
+「少写代码更省钱」这句话，说了等于没说——没人知道到底省多少。
 
-## What This Does
+这个技能把数字摊在桌面上：5 个日常任务（邮箱校验、防抖、CSV 求和、倒计时、限流器）× 3 个模型（Haiku / Sonnet / Opus）的中位数。
 
-【效果看板】一次性展示官方基准测试中位数：代码量更少、成本更低、速度更快。 注意是基准数据，不是当前仓库的真实统计。只展示，不改任何东西。 触发词：/ponytail-gain、ponytail 有什么用、能省多少。
+## 它长什么样
 
-### Key Features
+```
+  ponytail gain                     benchmark median · 5 tasks · 3 models
 
-- Scoreboard
-- Honesty boundary
-- Boundaries
+  Lines of code   no-skill  ████████████████████  100%
+                  ponytail  ██▌·················    6–20%   ▼ 80–94%
+  Cost            no-skill  ████████████████████  100%
+                  ponytail  █████▌··············   23–53%  ▼ 47–77%
+  Speed           ponytail  ▸ 3–6× faster
 
-## Installation
-
-### WorkBuddy
-
-```bash
-git clone https://github.com/<you>/ponytail-gain.git ~/.workbuddy-ai/skills/ponytail-gain
-pip install -r ~/.workbuddy-ai/skills/ponytail-gain/requirements.txt
+  This repo:  /ponytail-debt  (shortcuts you deferred)
+              /ponytail-audit (what's still cuttable)
 ```
 
-### Claude Code / 其他 Agent
+## 一句实话
+
+这些是**基准测试的中位数，不是你仓库的实测**。
+
+这个技能永远不报「你这个仓库省了 X 行」——因为那版没写的代码根本不存在，没有基线可以减。真实数字只有一个来源：`/ponytail-debt` 数出来的账本。所以这张卡片会指向它，而不是编一个数字。
+
+## 安装
 
 ```bash
-mkdir -p ~/.claude/skills/ponytail-gain
-cp -R SKILL.md README.md requirements.txt scripts references \
-      ~/.claude/skills/ponytail-gain/
+git clone https://github.com/chengangrun-ai/gongzi-teaches-code-gain.git \
+  ~/.workbuddy-ai/skills/gongzi-teaches-code-gain
 ```
 
-把仓库链接丢给 agent，它会按 `SKILL.md` 加载所需文件。
+没有依赖，不用 pip install。
 
-## Usage
+## 用法
 
-触发词：**/ponytail-gain、ponytail 有什么用、能省多少**
+```
+/ponytail-gain
+```
 
-## Architecture
+或者直接问「这个技能到底能省多少」「给我看看数据」。
 
-| 文件 | 作用 |
-|---|---|
-| `SKILL.md` | 触发条件与流程 |
+## 边界
 
-## Requirements
+- 一次性展示。不改代码、不改模式、不留痕迹。
+- 不虚构单仓库收益数字。
+- 想退出：说「正常模式」或 `stop ponytail`。
 
-- Python 3.9+
-- `pip install -r requirements.txt`
+## 致谢
 
-## Credits
-
-基于 [Ponytail](https://github.com/DietrichGebert/ponytail)（MIT，作者 DietrichGebert）改写
-
-Created by 公子 · [@你的GitHub](https://github.com/).
+基于 [Ponytail](https://github.com/DietrichGebert/ponytail)（MIT，作者 DietrichGebert）改写，保留了原作者的版权声明（见 `LICENSE`）。
 
 ## License
 
-MIT — Use it, modify it, share it.
+MIT. See [LICENSE](LICENSE).
+
+Made by [公子](https://github.com/chengangrun-ai).
